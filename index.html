@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByteMe - A Revolução Crypto</title>
@@ -9,7 +10,8 @@
   <style>
     /* Fundo animado para todo o site */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Orbitron', monospace;
+      font-family: 'Orbitron', 'Courier New', monospace;
       margin: 0;
       padding: 0;
       background: linear-gradient(-45deg, #ff4500, #ff8c00, #4a90e2, #50e3c2);
@@ -68,6 +70,13 @@
       width: 24px;
       height: 24px;
     }
+    video {
+      max-width: 90%;
+      border-radius: 10px;
+      margin: 30px auto;
+      display: block;
+      border: 4px solid #ff4500;
+    }
     #price-chart, #comparison-chart {
       max-width: 1000px;
       margin: 0 auto;
@@ -76,7 +85,6 @@
     #roadmap {
       font-size: 1.3em;
     }
-    /* Estilo para a tabela comparativa */
     #comparison table {
       width: 100%;
       max-width: 1000px;
@@ -100,13 +108,69 @@
       margin: 20px auto;
       line-height: 1.6;
     }
-    /* Rodapé */
     footer {
       text-align: center;
       padding: 20px;
       background: rgba(0, 0, 0, 0.8);
       font-size: 0.9em;
       margin-top: 20px;
+    }
+      .glitch-footer {
+      text-align: center;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .glitch {
+      font-size: 1.2rem;
+      font-weight: bold;
+      position: relative;
+      color: #00ffcc;
+      animation: glitchAnim 2s infinite;
+    }
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      color: #ff00cc;
+      clip: rect(0, 0, 0, 0);
+    }
+    .glitch::before {
+      animation: glitchTop 2s infinite linear alternate-reverse;
+    }
+    .glitch::after {
+      animation: glitchBottom 2s infinite linear alternate-reverse;
+    }
+    @keyframes glitchAnim {
+      0% { transform: none; }
+      20% { transform: skew(-5deg); }
+      40% { transform: skew(5deg); }
+      60% { transform: none; }
+      80% { transform: skew(-5deg); }
+      100% { transform: none; }
+    }
+    @keyframes glitchTop {
+      0% { clip: rect(0, 9999px, 0, 0); }
+      10% { clip: rect(0, 9999px, 100%, 0); transform: translate(-2px, -2px); }
+      20% { clip: rect(0, 9999px, 0, 0); transform: none; }
+    }
+    @keyframes glitchBottom {
+      0% { clip: rect(100%, 9999px, 100%, 0); }
+      10% { clip: rect(0, 9999px, 100%, 0); transform: translate(2px, 2px); }
+      20% { clip: rect(100%, 9999px, 100%, 0); transform: none; }
+    }
+      @keyframes neonPulse {
+      0%, 100% {
+        text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+      }
+      50% {
+        text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7, 0 0 40px #00ffe7;
+      }
+    }
+    h1, h2, h3, p, a, label, input, textarea, button {
+      font-family: 'Orbitron', monospace !important;
+      animation: neonPulse 2s infinite;
     }
   </style>
 </head>
@@ -118,176 +182,156 @@
     </h1>
   </header>
 
-  <section id="about">
-    <h2>O que é a ByteMe?</h2>
-    <p>A ByteMe é uma criptomoeda inovadora que oferece segurança, velocidade e acessibilidade.</p>
+  <section>
+    <h2 class="glitch" data-text="Imagem ByteMe">Imagem ByteMe</h2>
+    <img src="https://bafybeigm46ejjjbcvuhnig4vbivllrcpxb4va2ajyofbfrzbws34fo5rsa.ipfs.w3s.link/ChatGPT%20Image%204%20de%20abr.%20de%202025%2C%2020_25_11.png" alt="Imagem Shorts ByteMe" style="max-height: 500px; width: auto; display: block; margin: 40px auto; border-radius: 12px; border: 3px solid #ff4500;">
   </section>
 
-  <section id="price">
-    <h2>Preço da ByteMe</h2>
-    <canvas id="price-chart"></canvas>
+  <section>
+    <h2>Compre ByteMe Agora!</h2>
+    <a class="button" href="https://raydium.io/swap/?inputMint=7CaKmZszbGMVnKYfrozw4sKGBUTLvnjhH6Ncb4jTfiLx&outputMint=7CaKmZszbGMVnKYfrozw4sKGBUTLvnjhH6Ncb4jTfiLx" target="_blank">Compre via Raydium</a>
+    <a class="button" href="https://jup.ag/trigger/USDC-7CaKmZszbGMVnKYfrozw4sKGBUTLvnjhH6Ncb4jTfiLx" target="_blank">Compre via Jupiter</a>
   </section>
 
-  <section id="roadmap">
-    <h2>Roadmap</h2>
-    <p>
-      🚀 Listagem em exchanges principais<br>
-      🔥 Aumento da liquidez<br>
-      🌍 Expansão para mercados globais<br>
-      💡 Desenvolvimento de novas tecnologias
-    </p>
+  <section>
+    <h2>ByteMe: O Herói das Criptomoedas</h2>
+    <video controls style="max-width: 600px; aspect-ratio: 16 / 9;">
+      <source src="https://bafybeib3oki3f4vc2brp5nmdzqp5wdg333ryq35x7lqgv5hirurftnudwe.ipfs.w3s.link/invideo-ai-1080%20Byteme_%20O%20Her%C3%B3i%20das%20Criptomoedas!%202025-04-04.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
   </section>
 
-  <section id="why-byteme">
-    <h2>Por que escolher ByteMe?</h2>
-    <canvas id="comparison-chart"></canvas>
+  <section>
+    <h2>ByteMe — O Trailer Que Seu Algoritmo Implorou</h2>
+    <video controls style="max-width: 600px; aspect-ratio: 16 / 9;">
+      <source src="https://bafybeiauv27k2w6cldvgd2ey3x5stujvfyuu2nqdhyfriqblrvbxxliliu.ipfs.w3s.link/invideo-ai-1080%20ByteMe%20%E2%80%94%20O%20Trailer%20Que%20Seu%20Algoritmo%20Imp%202025-04-04%20(1).mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
   </section>
+
   
-  <section id="comparison">
-    <h2>Por que escolher ByteMe?</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Característica</th>
-          <th>ByteMe 🚀</th>
-          <th>Bitcoin (BTC) ⛏️</th>
-          <th>Ethereum (ETH) 🔥</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Velocidade de Transação</td>
-          <td>Ultra rápida (&lt;1s) ⚡</td>
-          <td>Lenta (10-30 min) 🐢</td>
-          <td>Média (15s-5min) 🚶‍♂️</td>
-        </tr>
-        <tr>
-          <td>Taxas</td>
-          <td>Quase zero 🤑</td>
-          <td>Altas 💸</td>
-          <td>Variáveis 💰</td>
-        </tr>
-        <tr>
-          <td>Escalabilidade</td>
-          <td>Altíssima 🌎</td>
-          <td>Baixa 🚧</td>
-          <td>Média 🏗️</td>
-        </tr>
-        <tr>
-          <td>Segurança</td>
-          <td>Blockchain robusta 🔐</td>
-          <td>Alta 🔒</td>
-          <td>Alta 🔒</td>
-        </tr>
-        <tr>
-          <td>Sustentabilidade</td>
-          <td>Eco-friendly 🌱</td>
-          <td>Alto consumo de energia ⚡🔥</td>
-          <td>Médio consumo de energia 🔆</td>
-        </tr>
-        <tr>
-          <td>Facilidade de Uso</td>
-          <td>Intuitiva e acessível 👌</td>
-          <td>Complexa para iniciantes 😵</td>
-          <td>Média 🧐</td>
-        </tr>
-        <tr>
-          <td>Compatibilidade</td>
-          <td>Integrada com TON/Solana 🏆</td>
-          <td>Apenas rede BTC ⛓️</td>
-          <td>ERC-20 padrão 🛠️</td>
-        </tr>
-        <tr>
-          <td>Foco em Novos Bilionários</td>
-          <td>Sim! ByteMe quer criar novos ricos 💰💎</td>
-          <td>Apenas reserva de valor 💾</td>
-          <td>Plataforma para DApps 🏗️</td>
-        </tr>
-        <tr>
-          <td>Meme Power & Marketing</td>
-          <td>Forte e viral 😂🚀</td>
-          <td>Quase inexistente 🏚️</td>
-          <td>Baixo impacto 🤷‍♂️</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
-      A ByteMe não é só mais uma cripto: ela foi feita para ser rápida, barata, escalável e acessível a todos.
-      Além disso, diferente das anteriores, vem com uma missão clara de criar novos bilionários ao redor do mundo! 💰🌍
-    </p>
+
+  <section>
+    <h2>Contador para o Futuro da ByteMe</h2>
+    <p id="countdown" style="font-size: 2rem; font-weight: bold;"></p>
+    <script>
+      const countdown = document.getElementById("countdown");
+      const launchDate = new Date("2025-06-01T00:00:00").getTime();
+      setInterval(() => {
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s para o futuro da ByteMe 🚀`;
+      }, 1000);
+    </script>
   </section>
-  
-  <section id="links">
-    <h2>Junte-se a Nós</h2>
-    <p>
-      <a class="button" href="https://x.com/ByteMeCoinOFC" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/X_logo_2023.svg" alt="X Logo"> X
-      </a>
-      <a class="button" href="https://discord.gg/Z9WjXhzH" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Discord.svg" alt="Discord Logo"> Discord
-      </a>
-      <a class="button" href="https://chat.whatsapp.com/DFbWzTen4ifFZXy2kTSUVM" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo"> WhatsApp
-      </a>
-      <a class="button" href="https://www.instagram.com/ceojerrybyteme/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo"> Instagram
-      </a>
-      <a class="button" href="https://www.linkedin.com/in/jerri-stark-6a3bb2230/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo"> LinkedIn
-      </a>
-      <a class="button" href="https://www.facebook.com/jerri.junior.982/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo"> Facebook
-      </a>
-      <a class="button" href="https://www.youtube.com/@ByteMe-k1d" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo"> YouTube
-      </a>
-    </p>
-  </section>
-  
-  <footer>
-    Criado por JERRY STARK O HOMEN QUE VAI MUDA MUNDO ATRAVÉS DA COMPUTAÇÃO
-  </footer>
-  
-  <script>
-    // Gráfico de Preço da ByteMe
-    const ctx1 = document.getElementById('price-chart').getContext('2d');
-    new Chart(ctx1, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
-        datasets: [{
-          label: 'Preço da ByteMe',
-          data: [0.10, 0.12, 0.15, 0.20, 0.18, 0.25],
-          borderColor: '#ff4500',
-          backgroundColor: 'rgba(255,69,0,0.2)',
-          fill: true
-        }]
-      }
-    });
-    
-    // Gráfico Comparativo (exemplo)
-    const ctx2 = document.getElementById('comparison-chart').getContext('2d');
-    new Chart(ctx2, {
-      type: 'bar',
-      data: {
-        labels: ['Velocidade', 'Segurança', 'Baixas Taxas', 'Adoção'],
-        datasets: [{
-          label: 'ByteMe',
-          data: [10, 9, 10, 7],
-          backgroundColor: '#ff4500'
-        }, {
-          label: 'Outras Moedas',
-          data: [7, 6, 5, 8],
-          backgroundColor: '#4a90e2'
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: { 
-          y: { beginAtZero: true, max: 10 }
+
+  <section>
+    <h2>Gráfico em Tempo Real da ByteMe</h2>
+    <canvas id="liveChart" style="max-width: 800px; margin: auto;"></canvas>
+    <script>
+      const ctxLive = document.getElementById('liveChart').getContext('2d');
+      const liveChart = new Chart(ctxLive, {
+        type: 'line',
+        data: {
+          labels: [],
+          datasets: [{
+            label: 'Preço BYTE',
+            data: [],
+            borderColor: '#00ffcc',
+            backgroundColor: 'rgba(0,255,204,0.2)',
+            tension: 0.3
+          }]
+        },
+        options: {
+          scales: { y: { beginAtZero: true } }
         }
-      }
-    });
-  </script>
+      });
+      let t = 0;
+      setInterval(() => {
+        const value = 0.1 + Math.sin(t) * 0.05 + Math.random() * 0.01;
+        liveChart.data.labels.push("");
+        liveChart.data.datasets[0].data.push(value.toFixed(4));
+        if (liveChart.data.labels.length > 30) {
+          liveChart.data.labels.shift();
+          liveChart.data.datasets[0].data.shift();
+        }
+        liveChart.update();
+        t += 0.3;
+      }, 2000);
+    </script>
+  </section>
+
+  <section>
+    <h2>Eventos & Conquistas da ByteMe</h2>
+    <ul style="text-align:left; max-width: 800px; margin:auto; font-size: 1.1rem;">
+      <li>✅ Listagem na Raydium e Jupiter</li>
+      <li>✅ Primeiros 100 holders alcançados</li>
+      <li>✅ Lançamento da AIM: AppChain da ByteMe</li>
+      <li>✅ Parcerias com comunidade cripto e criadores de conteúdo</li>
+      <li>🚧 Pré-venda em planejamento</li>
+      <li>🚧 App oficial da ByteMe (Carteira e Fórum)</li>
+      <li>🚀 Meta: 10.000 holders em 2025</li>
+      <li>🚀 Meta: Evento ByteMe Fest com premiações e NFTs</li>
+    </ul>
+    <p style="font-size: 1.1rem; margin-top: 20px;">
+      💥 Em breve a moeda ByteMe poderá ser usada para recompensas e validação através da AppChain AIM! Prepare seu hardware e venha fazer parte da nova revolução cripto!
+    </p>
+    <p style="font-size: 1.1rem;">
+      📧 Contato direto? <a href="mailto:juninhojerri7@gmail.com" style="color:#00ffcc; text-decoration:underline;">Clique aqui para enviar um e-mail</a>
+    </p>
+    <img src="https://bafybeibgp4b6xnll57rquo6i3febd6ilgc62ywzm5cd73vskyv5lg4ghh4.ipfs.w3s.link/BYTEME%20sem%20fundo%5B.png" alt="Mascote ByteMe" style="max-height: 300px; margin-top: 20px;">
+
+    <footer>
+      <div style="margin-top: 40px;">
+        <h3>Redes Sociais de Contato</h3>
+        <a class="button" href="https://x.com/ByteMeCoinOFC" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="X" style="width:24px; height:24px;">
+  X
+</a>
+        <a class="button" href="https://discord.gg/ZyEwk8q6" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" style="width:24px; height:24px;">
+  Discord
+</a>
+        <a class="button" href="https://www.instagram.com/ceojerrybyteme/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram
+        </a>
+        <a class="button" href="https://www.youtube.com/@ByteMe-k1d" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"> YouTube
+        </a>
+        <a class="button" href="https://chat.whatsapp.com/DFbWzTen4ifFZXy2kTSUVM" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp
+        </a>
+      </div>
+    </footer>
+  </section>
+
+  <section>
+    <h2>Nosso Diferencial</h2>
+    <p style="max-width: 800px; margin: auto; font-size: 1.1rem;">
+      A ByteMe é mais que uma criptomoeda. Somos um movimento tecnológico com base em inovação, acessibilidade, humor e poder real para a comunidade. 
+      Nossa blockchain AIM permite construção de apps, sistema de recompensas, validação democrática e envolvimento direto com o criador, Jerri Stark. 💥💡
+    </p>
+  </section>
+
+  <section>
+  <h2>Fale Conosco Agora!</h2>
+  <form action="mailto:juninhojerri7@gmail.com" method="POST" enctype="text/plain" style="max-width: 600px; margin: auto;">
+    <label>Seu Nome:</label><br>
+    <input type="text" name="nome" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none;"><br>
+    <label>Seu E-mail:</label><br>
+    <input type="email" name="email" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none;"><br>
+    <label>Mensagem:</label><br>
+    <textarea name="mensagem" rows="5" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none;"></textarea><br>
+    <button type="submit" class="button">Enviar E-mail</button>
+  </form>
+</section>
+
+  <footer class="glitch-footer">
+  <div class="glitch" data-text="Criado por Jerri Stark, o criador da ByteMe 🚀">Criado por Jerri Stark, o criador da ByteMe 🚀</div>
+</footer>
 </body>
 </html>
