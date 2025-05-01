@@ -1,485 +1,208 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-  <link rel="icon" href="https://bafybeibgp4b6xnll57rquo6i3febd6ilgc62ywzm5cd73vskyv5lg4ghh4.ipfs.w3s.link/BYTEME%20sem%20fundo%5B.png" type="image/png">
-  <meta name="description" content="ByteMe é a revolução cripto com estilo cyberpunk, oportunidades reais e comunidade ativa. Descubra o futuro com Jerri Stark.">
-  <meta property="og:title" content="ByteMe - O Futuro das Criptomoedas Está Aqui!">
-  <meta property="og:description" content="A revolução cripto com humor, tecnologia e oportunidades reais. Junte-se ao movimento ByteMe!">
-  <meta property="og:url" content="https://bytemecoinofficial.vercel.app">
-  <meta property="og:image" content="https://bafybeibgp4b6xnll57rquo6i3febd6ilgc62ywzm5cd73vskyv5lg4ghh4.ipfs.w3s.link/BYTEME%20sem%20fundo%5B.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ByteMe - O Futuro das Criptomoedas Está Aqui!">
-  <meta name="twitter:description" content="A revolução cripto com humor, tecnologia e oportunidades reais.">
-  <meta name="twitter:image" content="https://bafybeibgp4b6xnll57rquo6i3febd6ilgc62ywzm5cd73vskyv5lg4ghh4.ipfs.w3s.link/BYTEME%20sem%20fundo%5B.png">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ByteMe - A Revolução Crypto</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lunaro - A Heroína da Lua</title>
+  <meta name="description" content="Lunaro - a heroína que nasceu na lua e vai revolucionar o mercado cripto. Veja o contador regressivo, a história épica, gráfico de previsão e prepare-se para o lançamento." />
+  <meta property="og:title" content="Lunaro - A Heroína da Lua" />
+  <meta property="og:description" content="Prepare-se para o lançamento épico da Lunaro, a heroína cripto que resistiu ao bear market lunar. História, gráficos e muito mais." />
+  <meta property="og:image" content="https://bafybeib6vdot45pcinizabl66uby4f4fbucatlkxdppschbi4wubsb75bu.ipfs.w3s.link/947f2bde-02e0-4969-82fb-ca917ae0b992.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lunaro - A Heroína da Lua" />
+  <meta name="twitter:description" content="A história de Lunaro, a defensora do Web3, está prestes a começar. Junte-se à revolução lunar." />
+  <meta name="twitter:image" content="https://bafybeib6vdot45pcinizabl66uby4f4fbucatlkxdppschbi4wubsb75bu.ipfs.w3s.link/947f2bde-02e0-4969-82fb-ca917ae0b992.png" />
   <style>
-    /* Fundo animado para todo o site */
     body {
-      font-family: 'Orbitron', monospace;
-      font-family: 'Orbitron', 'Courier New', monospace;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(-45deg, #ff4500, #ff8c00, #4a90e2, #50e3c2);
-      background-size: 400% 400%;
-      animation: gradientAnimation 10s ease infinite;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #0d0d0d, #1a1a1a);
       color: #fff;
-      overflow-x: hidden;
-    }
-    @keyframes gradientAnimation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
     header {
-      position: relative;
-      padding: 60px 20px;
       text-align: center;
-      background: rgba(0,0,0,0.5);
+      padding: 2rem 1rem;
+      background: #111;
     }
-    header h1 {
-      font-size: 4em;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
+    h1 {
+      font-size: 2.5rem;
+      color: #9c27b0;
     }
-    .logo {
-      width: 80px;
-      height: 80px;
-    }
-    section {
-      padding: 50px 20px;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.6);
-      margin: 20px auto;
-      max-width: 1200px;
-      border-radius: 8px;
-    }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 20px;
-      background: #ff4500;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: 0.3s;
-      margin: 5px;
-    }
-    .button:hover {
-      background: #ff8c00;
-    }
-    .button img {
-      width: 24px;
-      height: 24px;
-    }
-    video {
-      max-width: 90%;
-      border-radius: 10px;
-      margin: 30px auto;
-      display: block;
-      border: 4px solid #ff4500;
-    }
-    #price-chart, #comparison-chart {
-      max-width: 1000px;
-      margin: 0 auto;
-      height: 400px;
-    }
-    #roadmap {
-      font-size: 1.3em;
-    }
-    #comparison table {
+    .hero-image {
       width: 100%;
-      max-width: 1000px;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background-color: #1e1e1e;
+      max-height: 400px;
+      object-fit: cover;
+      filter: brightness(0.8);
     }
-    #comparison th, #comparison td {
-      border: 1px solid #333;
-      padding: 12px;
-      text-align: center;
+    .story, .launch, .graph, .contact, .investor {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
     }
-    #comparison th {
-      background-color: #333;
+    .story h2, .launch h2, .graph h2, .contact h2, .investor h2 {
+      color: #ff4081;
     }
-    #comparison tr:nth-child(even) {
-      background-color: #1a1a1a;
+    .countdown {
+      font-size: 2rem;
+      margin: 1rem 0;
+      color: #4caf50;
     }
-    #comparison p {
-      max-width: 1000px;
-      margin: 20px auto;
-      line-height: 1.6;
+    canvas {
+      max-width: 100%;
+      background: #222;
+      border-radius: 10px;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.8);
-      font-size: 0.9em;
-      margin-top: 20px;
+      padding: 1rem;
+      background: #111;
+      color: #ccc;
     }
-      .glitch-footer {
-      text-align: center;
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-    .glitch {
+    .web3-btn {
+      display: block;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
       font-size: 1.2rem;
-      font-weight: bold;
-      position: relative;
-      color: #00ffcc;
-      animation: glitchAnim 2s infinite;
+      background: #9c27b0;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
     }
-    .glitch::before,
-    .glitch::after {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
+    .web3-btn:hover {
+      background: #7b1fa2;
+    }
+    .social {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .social a {
+      margin: 0 10px;
+      color: #00e5ff;
+      text-decoration: none;
+    }
+    .investor-form input, .investor-form textarea {
       width: 100%;
-      color: #ff00cc;
-      clip: rect(0, 0, 0, 0);
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: #222;
+      color: #fff;
     }
-    .glitch::before {
-      animation: glitchTop 2s infinite linear alternate-reverse;
+    .investor-form button {
+      background-color: #9c27b0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
     }
-    .glitch::after {
-      animation: glitchBottom 2s infinite linear alternate-reverse;
-    }
-    @keyframes glitchAnim {
-      0% { transform: none; }
-      20% { transform: skew(-5deg); }
-      40% { transform: skew(5deg); }
-      60% { transform: none; }
-      80% { transform: skew(-5deg); }
-      100% { transform: none; }
-    }
-    @keyframes glitchTop {
-      0% { clip: rect(0, 9999px, 0, 0); }
-      10% { clip: rect(0, 9999px, 100%, 0); transform: translate(-2px, -2px); }
-      20% { clip: rect(0, 9999px, 0, 0); transform: none; }
-    }
-    @keyframes glitchBottom {
-      0% { clip: rect(100%, 9999px, 100%, 0); }
-      10% { clip: rect(0, 9999px, 100%, 0); transform: translate(2px, 2px); }
-      20% { clip: rect(100%, 9999px, 100%, 0); transform: none; }
-    }
-      @keyframes neonPulse {
-      0%, 100% {
-        text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7, 0 0 20px #00ffe7;
-      }
-      50% {
-        text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7, 0 0 40px #00ffe7;
-      }
-    }
-    h1, h2, h3, p, a, label, input, textarea, button {
-      font-family: 'Orbitron', monospace !important;
-      animation: neonPulse 2s infinite;
+    .investor-form button:hover {
+      background-color: #7b1fa2;
     }
   </style>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-351593820"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-351593820');
-  </script>
-<script src="https://cdn.jsdelivr.net/npm/i18next@21.6.14/i18next.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@6.1.3/i18nextBrowserLanguageDetector.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const themeButtons = document.querySelectorAll('[data-set-theme]');
-    themeButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const selectedTheme = btn.getAttribute('data-set-theme');
-        localStorage.setItem('theme', selectedTheme);
-      });
-    });
-  });
-
-  function loadThemePreference() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    }
-  }
-</script>
 </head>
-<body data-theme="dark" onload="loadThemePreference()">
+<body>
   <header>
-  <div style="position: absolute; top: 10px; left: 20px;">
-    <button data-set-theme="light" class="button" style="padding: 5px 10px; font-size: 0.8rem; background: #fff; color: #000;">Tema Claro</button>
-    <button data-set-theme="dark" class="button" style="padding: 5px 10px; font-size: 0.8rem; background: #000; color: #fff;">Tema Escuro</button>
-  </div>
-    <div style="position: absolute; top: 10px; right: 20px;">
-      <select id="langSwitcher" style="padding: 5px; font-family: 'Orbitron', monospace; background: #111; color: #00ffe7; border-radius: 6px;">
-        <option value="pt">🌐 Português</option>
-        <option value="en">🇺🇸 English</option>
-        <option value="es">🇪🇸 Español</option>
-      </select>
-    </div>
-    <h1 class="animate__animated animate__fadeInDown glitch" data-text="ByteMe ⚡ O Futuro das Criptomoedas Está Aqui!">⚡ ByteMe - O Futuro das Criptomoedas Está Aqui! ⚡</h1>
+    <h1>Lunaro - A Heroína da Lua</h1>
+    <p>Prepare-se para o lançamento! Faltam:</p>
+    <div class="countdown" id="countdown"></div>
+    <p>Live de lançamento no YouTube: <strong>Canal Lunaro</strong></p>
   </header>
 
-  <section>
-    <h2 class="glitch" data-text="Imagem ByteMe">Imagem ByteMe</h2>
-    <img src="https://bafybeigm46ejjjbcvuhnig4vbivllrcpxb4va2ajyofbfrzbws34fo5rsa.ipfs.w3s.link/ChatGPT%20Image%204%20de%20abr.%20de%202025%2C%2020_25_11.png" alt="Imagem Shorts ByteMe" style="max-height: 500px; width: auto; display: block; margin: 40px auto; border-radius: 12px; border: 3px solid #ff4500;">
+  <img class="hero-image" src="https://bafybeie4manxegktvarhlomnwlipni3euibkhw4nzf6jnkvtuxpfw5oufm.ipfs.w3s.link/c73d3a5c-d1fb-4e15-997e-4188581a85fb%20(1).png" alt="Heroína Lunaro">
+
+  <section class="story">
+    <h2>A História de Lunaro</h2>
+    <p>No silêncio da lua, nasceu Lunaro, uma heroína esquecida pelas eras. Durante milênios, ela resistiu às trevas do bear market, protegendo sua luz e esperando seu destino. Agora, com o brilho do Web3, ela retorna, mais forte, para libertar o mundo das sombras. Seu destino? Encontrar o Príncipe Pool e restaurar o equilíbrio no universo cripto.</p>
   </section>
 
-  <section>
-    <h2>Compre ByteMe Agora!</h2>
-    <a class="button" href="https://raydium.io/swap/?inputMint=7CaKmZszbGMVnKYfrozw4sKGBUTLvnjhH6Ncb4jTfiLx&outputMint=7CaKmZszbGMVnKYfrozw4sKGBUTLvnjhH6Ncb4jTfiLx" target="_blank">Compre via Raydium</a>
-    <a class="button" href="https://jup.ag/trigger/USDC-7CaKmZszbGMVnKYfrozw4sKGBUTLvnjhH6Ncb4jTfiLx" target="_blank">Compre via Jupiter</a>
+  <section class="launch">
+    <h2>Data de Lançamento</h2>
+    <p>Faltam apenas <strong>25 dias</strong> para a Lunaro invadir as DEXs! Pool planejada na <strong>Raydium</strong> ou <strong>Orca</strong>.</p>
+    <button class="web3-btn">Conectar Carteira Web3</button>
   </section>
 
-  <section>
-    <h2>ByteMe: O Herói das Criptomoedas</h2>
-    <video controls style="max-width: 600px; aspect-ratio: 16 / 9;">
-      <source src="https://bafybeib3oki3f4vc2brp5nmdzqp5wdg333ryq35x7lqgv5hirurftnudwe.ipfs.w3s.link/invideo-ai-1080%20Byteme_%20O%20Her%C3%B3i%20das%20Criptomoedas!%202025-04-04.mp4" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
+  <section class="graph">
+    <h2>Previsão de Preço</h2>
+    <canvas id="priceChart" width="800" height="400"></canvas>
   </section>
 
-  <section>
-    <h2>ByteMe — O Trailer Que Seu Algoritmo Implorou</h2>
-    <video controls style="max-width: 600px; aspect-ratio: 16 / 9;">
-      <source src="https://bafybeiauv27k2w6cldvgd2ey3x5stujvfyuu2nqdhyfriqblrvbxxliliu.ipfs.w3s.link/invideo-ai-1080%20ByteMe%20%E2%80%94%20O%20Trailer%20Que%20Seu%20Algoritmo%20Imp%202025-04-04%20(1).mp4" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
+  <section class="contact">
+    <h2>Contato</h2>
+    <p>Envie sua mensagem ou proposta: <a href="mailto:juniorcaeb@gmail.com">juniorcaeb@gmail.com</a></p>
+    <div class="social">
+      <a href="https://github.com/ceocript" target="_blank">GitHub</a>
+      <a href="https://discord.gg/5T4uekaw" target="_blank">Discord</a>
+    </div>
   </section>
 
-  
+  <section class="investor">
+    <h2>Pré-Apresentação para Investidores</h2>
+    <img src="https://bafybeihei3dpfum7k34cyutx2hpfksbprdtkufhu2sfrzhj6esjq5su75u.ipfs.w3s.link/Lunaro_%20A%20Moeda%20da%20Lua%20(1).png" alt="Pré-apresentação para Investidores" style="width: 100%; max-width: 900px; margin: auto;">
 
-  <section>
-    <h2>Contador para o Futuro da ByteMe</h2>
-    <p id="countdown" style="font-size: 2rem; font-weight: bold;"></p>
-    <script>
-      const countdown = document.getElementById("countdown");
-      const launchDate = new Date("2025-06-01T00:00:00").getTime();
-      setInterval(() => {
-        const now = new Date().getTime();
-        const distance = launchDate - now;
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s para o futuro da ByteMe 🚀`;
-      }, 1000);
-    </script>
+    <h2>Formulário para Investidores</h2>
+    <form class="investor-form" action="mailto:juniorcaeb@gmail.com" method="POST" enctype="text/plain">
+      <label for="name">Nome Completo</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Enviar Proposta</button>
+    </form>
   </section>
 
-  <section>
-    <h2>Gráfico em Tempo Real da ByteMe</h2>
-    <canvas id="liveChart" style="max-width: 800px; margin: auto;"></canvas>
-    <script>
-      const ctxLive = document.getElementById('liveChart').getContext('2d');
-      const liveChart = new Chart(ctxLive, {
-        type: 'line',
-        data: {
-          labels: [],
-          datasets: [{
-            label: 'Preço BYTE',
-            data: [],
-            borderColor: '#00ffcc',
-            backgroundColor: 'rgba(0,255,204,0.2)',
-            tension: 0.3
-          }]
-        },
-        options: {
-          scales: { y: { beginAtZero: true } }
-        }
-      });
-      let t = 0;
-      setInterval(() => {
-        const value = 0.1 + Math.sin(t) * 0.05 + Math.random() * 0.01;
-        liveChart.data.labels.push("");
-        liveChart.data.datasets[0].data.push(value.toFixed(4));
-        if (liveChart.data.labels.length > 30) {
-          liveChart.data.labels.shift();
-          liveChart.data.datasets[0].data.shift();
-        }
-        liveChart.update();
-        t += 0.3;
-      }, 2000);
-    </script>
-  </section>
+  <footer>
+    <p>&copy; 2025 Lunaro. Todos os direitos reservados.</p>
+  </footer>
 
-  <section>
-    <h2>Eventos & Conquistas da ByteMe</h2>
-    <ul style="text-align:left; max-width: 800px; margin:auto; font-size: 1.1rem;">
-      <li>✅ Listagem na Raydium e Jupiter</li>
-      <li>✅ Primeiros 100 holders alcançados</li>
-      <li>✅ Lançamento da AIM: AppChain da ByteMe</li>
-      <li>✅ Parcerias com comunidade cripto e criadores de conteúdo</li>
-      <li>🚧 Pré-venda em planejamento</li>
-      <li>🚧 App oficial da ByteMe (Carteira e Fórum)</li>
-      <li>🚀 Meta: 10.000 holders em 2025</li>
-      <li>🚀 Meta: Evento ByteMe Fest com premiações e NFTs</li>
-    </ul>
-    <p style="font-size: 1.1rem; margin-top: 20px;">
-      💥 Em breve a moeda ByteMe poderá ser usada para recompensas e validação através da AppChain AIM! Prepare seu hardware e venha fazer parte da nova revolução cripto!
-    </p>
-    <p style="font-size: 1.1rem;">
-      📧 Contato direto? <a href="mailto:juninhojerri7@gmail.com" style="color:#00ffcc; text-decoration:underline;">Clique aqui para enviar um e-mail</a>
-    </p>
-    <img src="https://bafybeibgp4b6xnll57rquo6i3febd6ilgc62ywzm5cd73vskyv5lg4ghh4.ipfs.w3s.link/BYTEME%20sem%20fundo%5B.png" alt="Mascote ByteMe" style="max-height: 300px; margin-top: 20px;">
-
-    <footer>
-      <div style="margin-top: 40px;">
-        <h3>Redes Sociais de Contato</h3>
-        <a class="button" href="https://x.com/ByteMeCoinOFC" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="X" style="width:24px; height:24px;">
-  X
-</a>
-        <a class="button" href="https://discord.gg/ZyEwk8q6" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" style="width:24px; height:24px;">
-  Discord
-</a>
-        <a class="button" href="https://www.instagram.com/ceojerrybyteme/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram
-        </a>
-        <a class="button" href="https://www.youtube.com/@ByteMe-k1d" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube"> YouTube
-        </a>
-        <a class="button" href="https://chat.whatsapp.com/DFbWzTen4ifFZXy2kTSUVM" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp
-        </a>
-      </div>
-    </footer>
-  </section>
-
-  <section>
-    <h2>Nosso Diferencial</h2>
-    <p style="max-width: 800px; margin: auto; font-size: 1.1rem;">
-      A ByteMe é mais que uma criptomoeda. Somos um movimento tecnológico com base em inovação, acessibilidade, humor e poder real para a comunidade. 
-      Nossa blockchain AIM permite construção de apps, sistema de recompensas, validação democrática e envolvimento direto com o criador, Jerri Stark. 💥💡
-    </p>
-  </section>
-
-  <section>
-  <h2>Fale Conosco Agora!</h2>
-  <form action="mailto:juninhojerri7@gmail.com" method="POST" enctype="text/plain" style="max-width: 600px; margin: auto;">
-    <label>Seu Nome:</label><br>
-    <input type="text" name="nome" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none;"><br>
-    <label>Seu E-mail:</label><br>
-    <input type="email" name="email" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none;"><br>
-    <label>Mensagem:</label><br>
-    <textarea name="mensagem" rows="5" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none;"></textarea><br>
-    <button type="submit" class="button">Enviar E-mail</button>
-  </form>
-</section>
-
-  <footer class="glitch-footer">
-  <div class="glitch" data-text="Criado por Jerri Stark, o criador da ByteMe 🚀">Criado por Jerri Stark, o criador da ByteMe 🚀</div>
-</footer>
   <script>
-  window.chatbotConfig = {
-    botName: "ByteMe AI",
-    welcomeMessage: "🚀 Olá, eu sou a ByteMe AI! Estou aqui para te ajudar com tudo sobre a revolução cripto. Pergunte sobre compras, eventos ou nosso projeto! 💻🧠",
-    themeColor: "#00ffe7",
-    avatarUrl: "https://bafybeibgp4b6xnll57rquo6i3febd6ilgc62ywzm5cd73vskyv5lg4ghh4.ipfs.w3s.link/BYTEME%20sem%20fundo%5B.png",
-    emailTo: "juninhojerri7@gmail.com"
-  };
-</script>
-  <script src="https://cdn.jsdelivr.net/gh/ceocript/byte-ai-chatbot@main/chat.js"></script>
-<script>
-  i18next.use(i18nextBrowserLanguageDetector).init({
-    resources: {
-      en: {
-        translation: {
-          "Compre ByteMe Agora!": "Buy ByteMe Now!",
-          "ByteMe: O Herói das Criptomoedas": "ByteMe: The Crypto Hero",
-          "O Trailer Que Seu Algoritmo Implorou": "The Trailer Your Algorithm Begged For",
-          "Contador para o Futuro da ByteMe": "Countdown to the Future of ByteMe",
-          "Gráfico em Tempo Real da ByteMe": "Live ByteMe Chart",
-          "Eventos & Conquistas da ByteMe": "ByteMe Events & Achievements",
-          "Nosso Diferencial": "Our Differentials",
-          "Fale Conosco Agora!": "Contact Us Now!",
-          "Seu Nome:": "Your Name:",
-          "Seu E-mail:": "Your Email:",
-          "Mensagem:": "Message:",
-          "Enviar E-mail": "Send Email"
-        }
-      },
-      es: {
-        translation: {
-          "Compre ByteMe Agora!": "Compra ByteMe Ahora!",
-          "ByteMe: O Herói das Criptomoedas": "ByteMe: El Héroe de las Criptomonedas",
-          "O Trailer Que Seu Algoritmo Implorou": "El Tráiler Que Tu Algoritmo Rogó",
-          "Contador para o Futuro da ByteMe": "Cuenta Regresiva al Futuro de ByteMe",
-          "Gráfico em Tempo Real da ByteMe": "Gráfico en Tiempo Real de ByteMe",
-          "Eventos & Conquistas da ByteMe": "Eventos y Logros de ByteMe",
-          "Nosso Diferencial": "Nuestro Diferencial",
-          "Fale Conosco Agora!": "Contáctanos Ahora!",
-          "Seu Nome:": "Tu Nombre:",
-          "Seu E-mail:": "Tu Correo:",
-          "Mensagem:": "Mensaje:",
-          "Enviar E-mail": "Enviar Correo"
-        }
+    // Countdown Timer
+    const countdown = document.getElementById("countdown");
+    const launchDate = new Date("2025-05-25T00:00:00Z").getTime();
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+      if (distance < 0) {
+        countdown.innerHTML = "Lançado!";
+        clearInterval(timer);
+        return;
       }
-    }
-  }, function(err, t) {
-    document.getElementById('langSwitcher').addEventListener('change', function() {
-      i18next.changeLanguage(this.value);
-      location.reload();
-    });
-    $('[data-i18n]').each(function() {
-      var key = $(this).attr('data-i18n');
-      $(this).text(i18next.t(key));
-    });
-    $('label, button, h2').each(function() {
-      var text = $(this).text().trim();
-      if (i18next.exists(text)) {
-        $(this).text(i18next.t(text));
-      }
-    });
-  });
-</script>
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
 
-<script>
-  async function updateSupplyInfo() {
-    try {
-      const res = await fetch('https://public-api.solscan.io/token/meta?tokenAddress=7CaKmZszbGMVnKYfrozw4sKGBUTLvnjhH6Ncb4jTfiLx');
-      const data = await res.json();
-      const supply = parseFloat(data?.supply).toLocaleString();
-      const holders = data?.holder_count || 0;
-      const el = document.createElement('section');
-      el.innerHTML = `
-        <h2>📊 Estatísticas da Blockchain ByteMe</h2>
-        <p style="font-size: 1.2rem;">🔹 Supply Total: <strong>${supply}</strong></p>
-        <p style="font-size: 1.2rem;">🔸 Holders: <strong>${holders}</strong></p>
-      `;
-      document.body.insertBefore(el, document.querySelector('footer'));
-      const link = document.createElement('a');
-      link.href = 'https://solscan.io/token/7CaKmZszbGMVnKYfrozw4sKGBUTLvnjhH6Ncb4jTfiLx';
-      link.target = '_blank';
-      link.innerHTML = '<img src="https://cryptologos.cc/logos/solana-sol-logo.svg" alt="Solana" style="height:20px; vertical-align:middle; margin-right:8px;"> Ver no Solscan';
-      link.style.display = 'block';
-      link.style.margin = '10px auto';
-      link.style.fontSize = '1.1rem';
-      link.style.color = '#00ffe7';
-      link.style.textDecoration = 'none';
-      link.style.padding = '10px 20px';
-      link.style.border = '2px solid #00ffe7';
-      link.style.borderRadius = '8px';
-      link.style.transition = '0.3s';
-      link.onmouseover = () => link.style.backgroundColor = 'rgba(0,255,231,0.1)';
-      link.onmouseout = () => link.style.backgroundColor = 'transparent';
-      el.appendChild(link);
-    } catch (e) {
-      console.warn('Erro ao buscar dados do token:', e);
-    }
-  }
-  updateSupplyInfo();
-</script>
+    // Chart
+    const canvas = document.getElementById('priceChart');
+    const ctx = canvas.getContext('2d');
+    const prices = [0.0001, 0.0005, 0.001, 0.005, 0.01, 0.1, 1];
+    const labels = ["Abr", "1 Mai", "10 Mai", "17 Mai", "25 Mai", "15 Jun", "27 Jun"];
+
+    ctx.beginPath();
+    ctx.moveTo(0, 400 - prices[0] * 4000);
+    prices.forEach((price, i) => {
+      ctx.lineTo(i * 120, 400 - price * 4000);
+    });
+    ctx.strokeStyle = '#00e5ff';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    ctx.fillStyle = '#fff';
+    ctx.font = '16px sans-serif';
+    labels.forEach((label, i) => {
+      ctx.fillText(label, i * 120, 390);
+    });
+  </script>
 </body>
 </html>
